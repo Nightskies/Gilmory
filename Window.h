@@ -73,6 +73,9 @@ public:
 
 	unsigned short getHeight()const { return Height; }
 
+	void set_new_width(unsigned short w) { Width = w; }
+
+	void set_new_height(unsigned short h) { Height = h; }
 
 	std::string getHeader()const { return Header; }
 

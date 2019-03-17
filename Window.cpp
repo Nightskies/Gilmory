@@ -21,6 +21,9 @@ WindoW::WindoW(unsigned short width, unsigned short height, std::string header)
 
 void Window_Functions::Reshape(int w, int h)
 {
+	
+	MainWindow.set_new_width(w);
+	MainWindow.set_new_height(h);
 
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
@@ -178,6 +181,7 @@ void Window_Functions::Keyboard(unsigned char key, int x, int y)
 		}
 		break;
 	default:
+		if(key == 'a' || key == 'w' || key == 's' || key == 'd')
 		Menu_Functions::Move_selection(key);
 		break;
 	}
@@ -484,7 +488,7 @@ void Window_Functions::Mouse(int button, int state, int x, int y)
 	{
 		if (MainWindow.Draw_mode) 
 		{
-			Triangles.back().add_coord_vertex(x,y);
+			Triangles.back().add_coord_vertex(x, y);
 			std::cout << "syslog: set_coordinates_point" << std::endl;
 			MainWindow.Draw_mode = false;
 		}
