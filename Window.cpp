@@ -16,7 +16,6 @@ WindoW::WindoW(unsigned short width, unsigned short height, std::string header)
 	ColorWindow.R = 0.9;
 	ColorWindow.G = 0.2;
 	ColorWindow.B = 0.4;
-
 }
 
 void Window_Functions::Reshape(int w, int h)
